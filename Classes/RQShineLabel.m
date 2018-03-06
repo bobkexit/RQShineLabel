@@ -180,6 +180,7 @@
   [super setAttributedText:self.attributedString];
   if (now > self.endTime) {
     self.displaylink.paused = YES;
+    self.fadedOut = TRUE; //bobkexit:allows reuse shine and fade methods for instance
     if (self.completion) {
       self.completion();
     }
